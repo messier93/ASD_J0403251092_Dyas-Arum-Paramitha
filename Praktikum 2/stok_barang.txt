@@ -1,0 +1,11 @@
+BRG001,Roti,20
+BRG002,NasiUduk,15
+BRG003,MieGoreng,25
+BRG004,KentangGoreng,30
+BRG005,Biskuit,18
+BRG006,AirMineral,40
+BRG007,TehBotol,22
+BRG008,MinumanSoda,12
+BRG009,SusuKotak,16
+BRG010,JusBuah,14
+BRG067,Shawarma,100
