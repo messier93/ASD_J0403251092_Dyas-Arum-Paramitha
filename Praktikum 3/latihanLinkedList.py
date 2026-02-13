@@ -188,8 +188,9 @@ ll1.display()
 print("Linked list 2:" )
 ll2.display()
 
-# Gabungkan
+# merge
 merged = ll1.merge(ll2)
 
 print("Linked List setelah digabung: ")
+
 merged.display()
