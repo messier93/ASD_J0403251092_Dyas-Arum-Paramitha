@@ -1,3 +1,6 @@
+# Nama  : Dyas Arum Paramitha
+# NIM   : J0403251092
+# Kelas : TPL A2
 # ============================
 # Latihan 2: Tracing Rekursi
 # ============================
@@ -19,4 +22,5 @@ countdown(3)
 #Karena rekursi menggunakan call stack LIFO (last in, first out)
 #Saat fungsi countdown(3) dipanggil, program akan berlanjut ke fungsi selanjutnya
 #yaitu countdown(2) dan countdown(!) sampai base case n == 0
+
 #Dan setelah base case dicapai, 
