@@ -18,9 +18,11 @@ def countdown(n):
 
 countdown(3)
 
-#Mengapa output 'Keluar' muncul terbalik?
-#Karena rekursi menggunakan call stack LIFO (last in, first out)
-#Saat fungsi countdown(3) dipanggil, program akan berlanjut ke fungsi selanjutnya
-#yaitu countdown(2) dan countdown(!) sampai base case n == 0
-
-#Dan setelah base case dicapai, 
+""" Mengapa output 'Keluar' muncul terbalik?
+Karena rekursi menggunakan call stack LIFO (last in, first out) 
+saat fungsi countdown(3) dipanggil, program akan berlanjut ke fungsi 
+selanjutnya yaitu countdown(2) dan countdown(1) sampai base case n == 0.
+Setelah base case dicapai, proses akan kembali jalan ke fungsi sebelumnya. 
+Dan karena fungsi yang terakhir dipanggil adalah yang pertama selesai, maka 
+urutan  print bagian keluar menjadi terbalik
+dari urutan masuknya
