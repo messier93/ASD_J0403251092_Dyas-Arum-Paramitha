@@ -25,4 +25,5 @@ selanjutnya yaitu countdown(2) dan countdown(1) sampai base case n == 0.
 Setelah base case dicapai, proses akan kembali jalan ke fungsi sebelumnya. 
 Dan karena fungsi yang terakhir dipanggil adalah yang pertama selesai, maka 
 urutan  print bagian keluar menjadi terbalik
-dari urutan masuknya
+dari urutan masuknya """"
+
