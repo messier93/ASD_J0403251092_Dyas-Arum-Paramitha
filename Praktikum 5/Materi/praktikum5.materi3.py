@@ -1,3 +1,6 @@
+# Nama  : Dyas Arum Paramitha
+# NIM   : J0403251092
+# Kelas : TPL A2
 # ==========================================================
 # Contoh Rekursi 3: Menjumlahkan Elemen List
 # ==========================================================
@@ -11,4 +14,5 @@ def jumlah_list(data, index=0):
     return data[index] + jumlah_list(data, index + 1)
 
 #memanggil fungsi dan menampilkan hasil
+
 print(jumlah_list([2, 4, 6, 8])) # Output: 20
