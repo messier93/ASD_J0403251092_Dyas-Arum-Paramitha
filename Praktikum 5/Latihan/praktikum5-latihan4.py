@@ -23,13 +23,13 @@ def kombinasi(n, hasil=""):
 kombinasi(2)
 
 """
-Program kombinasi(n) menghasilkan semua kemungkinan kombinasi 
-huruf A dan B dengan panjang n menggunakan rekursi backtracking. 
-Alur program dimulai dengan memeriksa base case, yaitu saat panjang 
-string = n, maka kombinasi dicetak dan rekursi berhenti. 
-Jika base case belum tercapai, program masuk ke recursive call, di mana 
-setiap posisi menambahkan huruf A atau B dan memanggil fungsi kembali untuk 
-posisi berikutnya. Karena setiap posisi memiliki 2 kemungkinan, maka jumlah 
-kombinasi yang dihasilkan adalah 2 pangkat n (2ⁿ). Misalnya, untuk n = 2, 
-jumlah kombinasi adalah 2² = 4, yaitu AA, AB, BA, dan BB.
+Program kombinasi(n) menghasilkan semua kemungkinan
+kombinasi huruf A dan B sepanjang n menggunakan rekursi 
+backtracking. Fungsi memeriksa base case saat panjang 
+string = n dan mencetak kombinasi. Jika belum tercapai,
+ungsi menambahkan huruf A atau B di setiap posisi 
+melalui recursive call. Karena setiap posisi
+memiliki 2 kemungkinan, jumlah kombinasi yang dihasilkan 
+adalah 2ⁿ. Misalnya, untuk n = 2, kombinasi yang 
+dihasilkan adalah AA, AB, BA, dan BB
 """
