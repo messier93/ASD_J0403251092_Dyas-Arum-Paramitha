@@ -25,6 +25,14 @@ angka = [3, 7, 2, 9, 5]
 print("Nilai maksimum:", cari_maks(angka))
 
 """
-Program berjaalan dengan membandingkan stau elemen dengan max
-dari sisa elemen 
+Program bekerja dengan membandingkan setiap elemen 
+dengan nilai maksimum sisa elemen. Proses dimulai dari 
+index 0 dan memanggil fungsi dengan index + 1 hingga 
+mencapai elemen terakhir. Base case terjadi saat 
+index == len(data) - 1, di mana fungsi langsung 
+mengembalikan nilai elemen terakhir. Setelah itu, 
+setiap pemanggilan membandingkan elemen saat ini 
+dengan maksimum dari sisa elemen (maks_sisa) dan 
+mengembalikan yang lebih besar ke panggilan sebelumnya, 
+sehingga akhirnya diperoleh nilai maksimum seluruh list.
 """
