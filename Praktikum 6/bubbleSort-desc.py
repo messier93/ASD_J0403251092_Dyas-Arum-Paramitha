@@ -3,15 +3,14 @@
 # Kelas : TPL A2
 
 # =========================
-# Bubble Sort (Ascending)
+# Bubble Sort (Descending)
 # =========================
 
 def bubbleSort(data):
-    #compare elemen yang bersebelahan
     for passnum in range(len(data)-1,0,-1):
+        #jika elemen kanan lebih besar dari kirimaka tukar
         for i in range(passnum):
-            #jika elemen kiri lebih besar dari kanan maka tukar
-            if data[i]>data[i+1]:
+            if data[i]<data[i+1]: #ubah tanda agar mnjd terbalik
             #tukar dua data bersebalahan yg urutannya salah
                 temp = data[i]
                 data[i] = data[i+1]
@@ -24,16 +23,14 @@ print(data)
 #Program 4
 def shortBubbleSort(alist):
     exchanges = True
-    
     passnum = len(alist)-1
     
-    # loop berjalan selama masih ada pertukaran
     while passnum > 0 and exchanges:
         exchanges = False
         
         for i in range(passnum):
-            # jika urutan salah maka tukar
-            if alist[i] > alist[i+1]:
+            # kondisi dibalik untuk descending
+            if alist[i] < alist[i+1]:
                 exchanges = True
                 
                 temp = alist[i]
@@ -48,4 +45,4 @@ shortBubbleSort(alist)
 
 print(alist)
 
-#Output [17, 20, 26, 31, 44, 54, 55, 77, 93]
+#Output [93, 77, 55, 54, 44, 31, 26, 20, 17]
