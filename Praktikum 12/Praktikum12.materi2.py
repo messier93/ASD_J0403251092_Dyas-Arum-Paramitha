@@ -1,4 +1,14 @@
+# Nama    : Dyas Arum Paramitha
+# NIM     : J0403251092
+# Kelas   : A2
+# Praktikum 12 - Graph II: Algoritma Dijkstra
+
+# ==========================================================
+# Latihan 2: Implementasi Dijkstra
+# ==========================================================
+
 import heapq
+# Weighted graph dengan bobot positif
 graph = {
     'A': {'B': 4, 'C': 2},
     'B': {'D': 5},
@@ -7,31 +17,59 @@ graph = {
     }
 
 def dijkstra(graph, start):
-    # Menyimpan jarak minimum
+    """
+    Fungsi untuk mencari jarak terpendek dari node start
+    ke seluruh node lain menggunakan algoritma Dijkstra.
+    """
+
+    # Semua jarak awal dibuat tak hingga
     distances = {node: float('inf') for node in graph}
 
-    # Jarak node awal = 0
+    # Jarak dari start ke start adalah 0
     distances[start] = 0
 
-    # Priority queue
-    pq = [(0, start)]
+    # Priority queue menyimpan pasangan (jarak, node)
+    priority_queue = [(0, start)]
 
-    while pq:
-        current_distance, current_node = heapq.heappop(pq)
+    while priority_queue:
+        current_distance, current_node = heapq.heappop(priority_queue)
+        # Jika jarak saat ini lebih besar dari jarak yang sudah tercatat,
+        # maka proses dilewati
 
-        # Periksa semua tetangga
+        if current_distance > distances[current_node]:
+            continue
+
+        # Periksa semua tetangga dari node saat ini
         for neighbor, weight in graph[current_node].items():
-            
             distance = current_distance + weight
-        
-            # Jika ditemukan jarak lebih kecil
+
+            # Jika ditemukan jarak yang lebih kecil, perbarui jaraknya
             if distance < distances[neighbor]:
-                
                 distances[neighbor] = distance
-
-                heapq.heappush(pq, (distance, neighbor))
-
+                heapq.heappush(priority_queue, (distance, neighbor))
+            
     return distances
-
+    
 hasil = dijkstra(graph, 'A')
-print(hasil)
+print("Jarak terpendek dari node A:")
+for node, distance in hasil.items():
+    print(node, "=", distance)
+
+# Jawaban Analisis:
+# 1. Berapa jarak terpendek dari A ke B? 4 (melalui A -> B)
+
+# 2. Berapa jarak terpendek dari A ke C? 2 (melalui A -> C)
+
+# 3. Berapa jarak terpendek dari A ke D? 3 (melalui A -> C -> D)
+
+# 4. Mengapa jarak A ke D lebih kecil melalui C dibandingkan melalui B? Karena jalur A -> C -> D memiliki total bobot 2 + 1 = 3,
+# sedangkan A -> B -> D memiliki total bobot 4 + 5 = 9, sehingga jalur
+#  melalui C lebih optimal (lebih kecil total bobotnya).
+
+# 5. Apa fungsi priority_queue dalam algoritma Dijkstra? priority_queue digunakan untuk menyimpan node berdasarkan jarak
+# terkecil sehingga node dengan jarak paling kecil diproses terlebih dahulu,
+# sehingga pencarian jalur terpendek menjadi lebih efisien.
+
+# 6. Mengapa Dijkstra tidak cocok untuk graph dengan bobot negatif? Karena Dijkstra mengasumsikan bahwa jarak tidak akan berkurang
+# sebuah node diproses. Jika ada bobot negatif, jarak bisa berubah
+# menjadi lebih kecil sehingga hasil algoritma bisa menjadi tidak benar.
