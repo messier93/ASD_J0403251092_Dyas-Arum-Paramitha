@@ -9,7 +9,7 @@
 
 import heapq
 
-# 1. Representasi graph berbobot
+# Representasi graph berbobot
 graph = {
     'Bogor': {'Jakarta': 5, 'Depok': 2},
     'Depok': {'Jakarta': 2, 'Bandung': 6},
@@ -17,7 +17,7 @@ graph = {
     'Bandung': {}
 }
 
-# 2. Fungsi Dijkstra
+# ungsi Dijkstra
 def dijkstra(graph, start):
 
     # Menyimpan jarak awal semua node (infinity)
@@ -48,13 +48,13 @@ def dijkstra(graph, start):
     return distances
 
 
-# 3. Input node awal (atau bisa langsung ditentukan)
+# Input node awal (atau bisa langsung ditentukan)
 start_node = input("Masukkan node awal (contoh: Bogor): ")
 
-# 4. Menjalankan algoritma
+# Menjalankan algoritma
 hasil = dijkstra(graph, start_node)
 
-# 5. Output hasil
+# Output hasil
 print("Jarak terpendek dari {start_node}:")
 
 for kota, jarak in hasil.items():
